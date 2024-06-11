@@ -25,6 +25,7 @@ CREATE TABLE Roles (
     RoleName VARCHAR(100),
     Description TEXT,
     Salary DECIMAL(10, 2),
+    EmployeeID INT
     DepartmentID INT,
     FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
     FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
@@ -38,6 +39,7 @@ CREATE TABLE Projects (
     EndDate DATE,
     Budget DECIMAL(10, 2),
     DepartmentID INT,
+    EmployeeID INT
     FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
      FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
 );
